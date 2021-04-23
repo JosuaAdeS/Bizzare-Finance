@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/dark_gray"
     android:orientation="vertical"
-    android:paddingLeft="30dp"
     android:paddingBottom="50dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2.5">
+        android:layout_weight="2.5"
+        android:background="@drawable/bg_rounded_gray">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -28,14 +28,30 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_rectangle" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOGO"
+                    android:textSize="72dp"
+                    android:textColor="@color/bg_blue"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
         </RelativeLayout>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.7"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -63,9 +79,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/loginUsername"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="@color/bg_blue"
@@ -75,10 +94,10 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:background="@color/light_gray"
                     android:fontFamily="@font/roboto_slab_bold"
-                    android:hint="Email"
+                    android:hint="Username"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/white"
                     android:textSize="18dp"
@@ -87,6 +106,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/loginPassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="@color/bg_blue"
@@ -94,11 +114,12 @@
                 app:hintTextColor="@color/bg_blue"
                 app:placeholderTextColor="@color/bg_blue"
                 app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/bg_blue"
                 android:layout_marginTop="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:background="@color/light_gray"
                     android:hint="Password"
                     android:textColor="@color/white"
@@ -116,10 +137,11 @@
         android:layout_weight="1"
         android:layout_marginRight="25dp"
         android:orientation="vertical"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:paddingLeft="30dp">
 
         <Button
-            android:id="@+id/login"
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
@@ -127,13 +149,14 @@
             android:background="@drawable/ic_btn_login"
             android:fontFamily="@font/roboto_slab_bold"/>
         <Button
-            android:id="@+id/btn_regis"
+            android:id="@+id/btnRegis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Registration"
             android:textColor="@color/white"
             android:background="@drawable/ic_btn_regis"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/roboto_slab_bold"/>
+            android:fontFamily="@font/roboto_slab_bold"
+            android:onClick="register"/>
     </LinearLayout>
 </LinearLayout>

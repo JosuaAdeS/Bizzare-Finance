@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray"
+    android:orientation="vertical"
+    android:paddingBottom="50dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_rounded_gray">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left|center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_rectangle"
+                    android:rotation="180"
+                    android:scaleY="-0.5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOGO"
+                    android:textSize="48dp"
+                    android:textColor="@color/bg_blue"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="34dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginRight="25dp"
+        android:layout_weight="3">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regisFullname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/bg_blue"
+                app:boxStrokeColor="@color/bg_blue"
+                app:hintTextColor="@color/bg_blue"
+                app:placeholderTextColor="@color/bg_blue"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/light_gray"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:hint="Full Name"
+                    android:inputType="textLongMessage"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regisNIK"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/bg_blue"
+                app:boxStrokeColor="@color/bg_blue"
+                app:hintTextColor="@color/bg_blue"
+                app:placeholderTextColor="@color/bg_blue"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/light_gray"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:hint="NIK"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regisHandphone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/bg_blue"
+                app:boxStrokeColor="@color/bg_blue"
+                app:hintTextColor="@color/bg_blue"
+                app:placeholderTextColor="@color/bg_blue"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/light_gray"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:hint="No Handphone"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regisEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/bg_blue"
+                app:boxStrokeColor="@color/bg_blue"
+                app:hintTextColor="@color/bg_blue"
+                app:placeholderTextColor="@color/bg_blue"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/light_gray"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regisUsername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/bg_blue"
+                app:boxStrokeColor="@color/bg_blue"
+                app:hintTextColor="@color/bg_blue"
+                app:placeholderTextColor="@color/bg_blue"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/light_gray"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:hint="Username"
+                    android:inputType="textLongMessage"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regisPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/bg_blue"
+                app:boxStrokeColor="@color/bg_blue"
+                app:hintTextColor="@color/bg_blue"
+                app:placeholderTextColor="@color/bg_blue"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/bg_blue"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/light_gray"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regisConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/bg_blue"
+                app:boxStrokeColor="@color/bg_blue"
+                app:hintTextColor="@color/bg_blue"
+                app:placeholderTextColor="@color/bg_blue"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/bg_blue"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/light_gray"
+                    android:hint="Re-type Password"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:inputType="textPassword"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:paddingLeft="10dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textColor="@color/bg_blue"
+                android:background="@drawable/ic_btn_login"
+                android:fontFamily="@font/roboto_slab_bold"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>
