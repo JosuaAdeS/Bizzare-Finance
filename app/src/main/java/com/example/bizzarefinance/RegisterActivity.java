@@ -3,6 +3,8 @@ package com.example.bizzarefinance;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -83,10 +85,10 @@ public class RegisterActivity extends AppCompatActivity {
                 String password = rPassword.getText().toString();
                 String confirm = rConfirm.getText().toString();
                 if (name.equals("") || nik.equals("") || hp.equals("") || username.equals("") || email.equals("")
-                        || password.equals("") || !(password.equals(confirm)) || password.length()<=6) {
+                        || password.equals("") || !(password.equals(confirm)) || password.length() <= 6) {
                     Toast.makeText(RegisterActivity.this, "Please check your form carefully",
                             Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     Log.d(TAG, "email adalah : ?" + email);
                     mFirebaseAuth.createUserWithEmailAndPassword(email, password)
                             .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
@@ -94,10 +96,18 @@ public class RegisterActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
                                         Log.d(TAG, "createUserWithEmail:success");
-                                        Toast.makeText(RegisterActivity.this, "Register Successfull",
-                                                Toast.LENGTH_SHORT).show();
                                         UserDetail userDetail = new UserDetail(name, nik, hp, username);
                                         UserDetail.uid = task.getResult().getUser().getUid();
+                                        AlertDialog alertDialog = new AlertDialog.Builder(RegisterActivity.this).create();
+                                        alertDialog.setTitle("Registration Success");
+                                        alertDialog.setMessage("Please login first with your account");
+                                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                                                new DialogInterface.OnClickListener() {
+                                                    public void onClick(DialogInterface dialog, int which) {
+                                                        dialog.dismiss();
+                                                    }
+                                                });
+                                        alertDialog.show();
                                         firebaseDatabase.getReference(UserDetail.uid).setValue(userDetail)
                                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                     @Override
@@ -149,6 +159,9 @@ public class RegisterActivity extends AppCompatActivity {
             String pass = rPassword.getText().toString().trim();
             String confirm = rConfirm.getText().toString().trim();
 
+            boolean cek = false;
+            int x = email.indexOf("@");
+            if (x>0)cek=true;
             if (name.equals("")) {
                 lfullName.setError("Please Fill the Blank");
             } else {
@@ -175,7 +188,9 @@ public class RegisterActivity extends AppCompatActivity {
 
             if (email.equals("")) {
                 lEmail.setError("Please Fill the Blank");
-            } else {
+            }else if (cek==false){
+                lEmail.setError("Email must have symbol '@' ");
+            }else {
                 lEmail.setError(null);
             }
 
