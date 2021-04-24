@@ -84,20 +84,22 @@
             android:paddingTop="10dp">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/loginUsername"
+                android:id="@+id/loginEmail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="@color/bg_blue"
                 app:boxStrokeColor="@color/bg_blue"
                 app:hintTextColor="@color/bg_blue"
-                app:placeholderTextColor="@color/bg_blue">
+                app:placeholderTextColor="@color/bg_blue"
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loginEmail2"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:background="@color/light_gray"
+                    android:background="@drawable/ic_line1"
                     android:fontFamily="@font/roboto_slab_bold"
-                    android:hint="Username"
+                    android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/white"
                     android:textSize="18dp"
@@ -115,12 +117,14 @@
                 app:placeholderTextColor="@color/bg_blue"
                 app:passwordToggleEnabled="true"
                 app:passwordToggleTint="@color/bg_blue"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loginPassword2"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
-                    android:background="@color/light_gray"
+                    android:background="@drawable/ic_line1"
                     android:hint="Password"
                     android:textColor="@color/white"
                     android:textSize="18dp"

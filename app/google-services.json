@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "830646139070",
+    "firebase_url": "https://bizzarefinance-default-rtdb.firebaseio.com",
+    "project_id": "bizzarefinance",
+    "storage_bucket": "bizzarefinance.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830646139070:android:8132b7265511f7b1df46ef",
+        "android_client_info": {
+          "package_name": "com.example.bizzarefinance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830646139070-30bdddq1q49t1pt8jd8ldmtq5v09gcoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5QrK7W9gDvvygRMsy75qPAEJbN1aWTrs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "830646139070-30bdddq1q49t1pt8jd8ldmtq5v09gcoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
