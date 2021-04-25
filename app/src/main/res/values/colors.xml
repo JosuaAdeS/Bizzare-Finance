@@ -11,5 +11,7 @@
     <color name="light_gray">#595E6B</color>
     <color name="bg_blue">#6CBBD9</color>
     <color name="light_black">#2C2C2C</color>
+    <color name="green">#06C502</color>
+    <color name="red">#FF4343</color>
 
 </resources>
