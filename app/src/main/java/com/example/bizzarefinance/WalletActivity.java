@@ -35,7 +35,7 @@ public class WalletActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String balance = snapshot.child("balance").getValue().toString();
                 int total = Integer.parseInt(balance);
-                String hasil = String.format("%,d",total);
+                String hasil = String.format("%,d",total) + ".00";
                 txtBalance.setText(hasil);
                 setBalance(total);
             }
