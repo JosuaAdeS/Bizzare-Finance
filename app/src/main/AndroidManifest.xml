@@ -11,7 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BizzareFinance">
+
         <activity android:name=".ProfileActivity"></activity>
+
+        <activity android:name=".MarketActivity2"></activity>
+        <activity android:name=".TradeBeliActivity"></activity>
+        <activity android:name=".TradeJualActivity" />
+        <activity android:name=".DepositActivity" />
+
         <activity android:name=".BuySellActivity" />
         <activity android:name=".WalletActivity" />
         <activity android:name=".TradeActivity" />

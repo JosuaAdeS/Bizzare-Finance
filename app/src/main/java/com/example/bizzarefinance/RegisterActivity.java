@@ -84,6 +84,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = rEmail.getText().toString();
                 String password = rPassword.getText().toString();
                 String confirm = rConfirm.getText().toString();
+                int balance = 0;
                 if (name.equals("") || nik.equals("") || hp.equals("") || username.equals("") || email.equals("")
                         || password.equals("") || !(password.equals(confirm)) || password.length() <= 6) {
                     Toast.makeText(RegisterActivity.this, "Please check your form carefully",
@@ -96,7 +97,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
                                         Log.d(TAG, "createUserWithEmail:success");
-                                        UserDetail userDetail = new UserDetail(name, nik, hp, username);
+                                        UserDetail userDetail = new UserDetail(name, nik, hp, username,balance);
                                         UserDetail.uid = task.getResult().getUser().getUid();
                                         AlertDialog alertDialog = new AlertDialog.Builder(RegisterActivity.this).create();
                                         alertDialog.setTitle("Registration Success");

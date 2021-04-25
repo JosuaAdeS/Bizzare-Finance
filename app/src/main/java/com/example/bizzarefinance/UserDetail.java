@@ -2,6 +2,27 @@ package com.example.bizzarefinance;
 
 public class UserDetail {
     private String fullname,NIK,handphone,username;
+    private int balance;
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public static String getUid() {
+        return uid;
+    }
+
+    public static void setUid(String uid) {
+        UserDetail.uid = uid;
+    }
+
+    public UserDetail(int balance) {
+        this.balance = balance;
+    }
 
     public static String uid ;
     public UserDetail(){
@@ -13,6 +34,14 @@ public class UserDetail {
         this.NIK = NIK;
         this.handphone = handphone;
         this.username = username;
+    }
+
+    public UserDetail(String fullname, String NIK, String handphone, String username, int balance) {
+        this.fullname = fullname;
+        this.NIK = NIK;
+        this.handphone = handphone;
+        this.username = username;
+        this.balance = balance;
     }
 
     public String getFullname() {

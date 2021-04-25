@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:background="@drawable/bg_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left|center"
+                android:paddingLeft="17dp">
+
+                <ImageButton
+                    android:id="@+id/top_Back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_back_trade" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sell Crypto Coin"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/arvo_bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|center"
+                android:paddingRight="17dp">
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    //mulai dari sini
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/TBIcon"
+                    android:background="@drawable/redcoin"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/arvo_bold"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/txtTBIconName"
+                    android:text="1 RedCoin = "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/arvo_bold"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/txtTBPrice"
+                    android:text="Rp.190,000,00"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/arvo_bold"
+                    android:paddingLeft="10dp"
+                    android:text="0"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/arvo_bold"
+                    android:paddingLeft="65dp"
+                    android:text="USD"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/arvo_bold"
+                    android:paddingTop="30dp"
+                    android:id="@+id/txtTJRange"
+                    android:text="10,000 USD - 15,000,00 USD"/>
+                <Button
+                    android:layout_width="350dp"
+                    android:id="@+id/sellNow"
+                    android:layout_height="wrap_content"
+                    android:text="Sell Now"
+                    android:textColor="@color/white"
+                    android:background="@drawable/ic_btn_regis"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:layout_marginTop="50dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

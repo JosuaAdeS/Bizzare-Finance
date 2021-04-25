@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -20,6 +21,16 @@ import android.widget.TextView;
 public class MarketActivity extends AppCompatActivity {
 
     ListView list;
+    public static int pos;
+
+    public static int getPos() {
+        return pos;
+    }
+
+    public static void setPos(int pos) {
+        MarketActivity.pos = pos;
+    }
+
     String titles[] = {"Bitcoin", "ASCH Finance", "Faircoin", "Myth US", "PeerNance", "Radium", "Redcoin", "RiseCoin", "Skylink", "Vergecoin", "Voxels", "World Link"};
     String standfors [] = {"BTC", "ASCH", "FCN", "MYU", "PNC", "RAD", "RDC", "RSC", "SLK", "VEC", "VXL", "WLK"};
     String prices [] = {"$49,732.72","$2,195.19","$488.10","$1.01","$0.27676","$29.14","$224.97","$31.19","$3,852.62","$39,122.51","$254.78","$769,90"};
@@ -40,6 +51,16 @@ public class MarketActivity extends AppCompatActivity {
         navWallet = findViewById(R.id.navWallet1);
 
         MyAdapter adapter = new MyAdapter(this, titles, standfors, prices, changes, imgs);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MarketActivity.this,MarketActivity2.class);
+                intent.putExtra("CryptoName",list.getItemAtPosition(position).toString());
+                setPos(position);
+                startActivity(intent);
+            }
+        });
         list.setAdapter(adapter);
 
         navTrade.setOnClickListener(new View.OnClickListener() {
@@ -110,5 +131,26 @@ public class MarketActivity extends AppCompatActivity {
 
             return row;
         }
+    }
+
+
+    public String getTitles(int i) {
+        return titles[i];
+    }
+
+    public String getStandfors(int i) {
+        return standfors[i];
+    }
+
+    public String getPrices(int i) {
+        return prices[i];
+    }
+
+    public String getChanges(int i) {
+        return changes[i];
+    }
+
+    public int getImgs(int i) {
+        return imgs[i];
     }
 }
