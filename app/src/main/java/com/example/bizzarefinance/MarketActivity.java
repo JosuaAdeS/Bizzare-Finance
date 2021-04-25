@@ -5,11 +5,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -25,15 +28,37 @@ public class MarketActivity extends AppCompatActivity {
             R.drawable.peernance,R.drawable.radium,R.drawable.redcoin,R.drawable.risecoin,
             R.drawable.skylink,R.drawable.vergecoin,R.drawable.voxels,R.drawable.worldlink};
 
+    private ImageButton navTrade,navWallet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_market);
 
         list = findViewById(R.id.listMarket);
+        navTrade = findViewById(R.id.navTrade1);
+        navWallet = findViewById(R.id.navWallet1);
 
         MyAdapter adapter = new MyAdapter(this, titles, standfors, prices, changes, imgs);
         list.setAdapter(adapter);
+
+        navTrade.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MarketActivity.this,TradeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        navWallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MarketActivity.this,WalletActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     class MyAdapter extends ArrayAdapter<String> {

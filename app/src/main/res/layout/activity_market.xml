@@ -24,10 +24,12 @@
                 android:gravity="left|center"
                 android:paddingLeft="17dp">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/topMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_menu" />
+                    android:src="@drawable/ic_menu"
+                    android:background="@android:color/transparent"/>
             </LinearLayout>
 
             <LinearLayout
@@ -47,10 +49,11 @@
                 android:gravity="right|center"
                 android:paddingRight="17dp">
 
-                <ImageView
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_search" />
+                    android:src="@drawable/ic_search"
+                    android:background="@android:color/transparent"/>
             </LinearLayout>
         </RelativeLayout>
 
@@ -137,10 +140,12 @@
                 android:layout_height="match_parent"
                 android:gravity="center|center">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/navTrade1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_navbar_trade_inactive" />
+                    android:src="@drawable/ic_navbar_trade_inactive"
+                    android:background="@android:color/transparent"/>
             </LinearLayout>
 
             <LinearLayout
@@ -149,10 +154,12 @@
                 android:gravity="right|center"
                 android:paddingRight="47dp">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/navWallet1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_navbar_wallet_inactive" />
+                    android:src="@drawable/ic_navbar_wallet_inactive"
+                    android:background="@android:color/transparent"/>
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
