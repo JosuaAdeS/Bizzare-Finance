@@ -112,20 +112,70 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
             <TextView
                 android:id="@+id/textViewFullname"
-                android:textColor="#6CBBD9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
                 android:text="Fullname"
+                android:textColor="#6CBBD9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textViewNik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="80dp"
+                android:text="Nik"
+                android:textColor="#6CBBD9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewNoHp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="140dp"
+                android:text="No Handphone"
+                android:textColor="#6CBBD9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="196dp"
+                android:text="Email"
+                android:textColor="#6CBBD9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="252dp"
+                android:text="Username"
+                android:textColor="#6CBBD9"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/imageFullname"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -136,57 +186,8 @@
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/ic_line_gray" />
 
-            <TextView
-                android:id="@+id/textViewNik"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="80dp"
-                android:text="Nik"
-                android:textColor="#6CBBD9"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <TextView
-                android:id="@+id/textViewNoHp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="172dp"
-                android:text="No Handphone"
-                android:textColor="#6CBBD9"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textViewEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="216dp"
-                android:text="Email"
-                android:textColor="#6CBBD9"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textViewUsername"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="268dp"
-                android:text="Username"
-                android:textColor="#6CBBD9"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/imageLineNIK"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -197,66 +198,60 @@
                 app:layout_constraintVertical_bias="0.194"
                 app:srcCompat="@drawable/ic_line_gray" />
 
+            <ImageView
+                android:id="@+id/imageLineNoHP"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.389"
+                app:srcCompat="@drawable/ic_line_gray" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.584"
+                app:srcCompat="@drawable/ic_line_gray" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.779"
+                app:srcCompat="@drawable/ic_line_gray" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
-    //fullname
+    //navbar
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.14"
-        android:background="@drawable/bg_navbar">
+        android:background="@drawable/bg_logout">
 
-        <RelativeLayout
+        <TextView
+            android:text="Log Out"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_condensed_bold"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="left|center"
-                android:paddingLeft="47dp">
-
-                <ImageView
-                    android:id="@+id/marketbtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_navbar_market_inactive" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|center">
-
-                <ImageButton
-                    android:id="@+id/navTrade1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/ic_navbar_trade_active" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right|center"
-                android:paddingRight="47dp">
-
-                <ImageButton
-                    android:id="@+id/navWallet1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/ic_navbar_wallet_inactive" />
-            </LinearLayout>
-        </RelativeLayout>
+            android:layout_height="match_parent"
+            android:gravity="center"
     </LinearLayout>
-</LinearLayout>
