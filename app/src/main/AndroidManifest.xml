@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BizzareFinance">
         <activity android:name=".TradeJualActivity"></activity>
+        <activity android:name=".DepositActivity"></activity>
         <activity android:name=".BuySellActivity" />
         <activity android:name=".WalletActivity" />
         <activity android:name=".TradeActivity" />

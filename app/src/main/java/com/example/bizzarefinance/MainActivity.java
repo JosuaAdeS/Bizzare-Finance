@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                                         Log.d("Login", "Login:success");
                                         Toast.makeText(MainActivity.this, "Login Successfull",
                                                 Toast.LENGTH_LONG).show();
-                                        UserDetail.uid = task.getResult().getUser().getUid();
+                                        UserDetail.setUid(task.getResult().getUser().getUid());
                                         Intent intent = new Intent(MainActivity.this, MarketActivity.class);
                                         startActivity(intent);
                                     } else {

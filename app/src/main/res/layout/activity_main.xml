@@ -31,6 +31,7 @@
 
         </RelativeLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -56,97 +57,103 @@
             android:textSize="12dp" />
     </LinearLayout>
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginRight="25dp"
-        android:layout_weight="1.2">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="30dp"
-            android:paddingTop="10dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1.2">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/loginEmail"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColorHint="@color/bg_blue"
-                app:boxStrokeColor="@color/bg_blue"
-                app:hintTextColor="@color/bg_blue"
-                app:placeholderTextColor="@color/bg_blue"
-                app:errorEnabled="true">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/loginEmail2"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loginEmail"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:background="@drawable/ic_line1"
-                    android:fontFamily="@font/roboto_slab_bold"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
-                    android:maxLines="1"
-                    android:paddingLeft="10dp"/>
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/bg_blue"
+                    app:boxStrokeColor="@color/bg_blue"
+                    app:errorEnabled="true"
+                    app:hintTextColor="@color/bg_blue"
+                    app:placeholderTextColor="@color/bg_blue">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/loginPassword"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColorHint="@color/bg_blue"
-                app:boxStrokeColor="@color/bg_blue"
-                app:hintTextColor="@color/bg_blue"
-                app:placeholderTextColor="@color/bg_blue"
-                app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/bg_blue"
-                android:layout_marginTop="10dp"
-                app:errorEnabled="true">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loginEmail2"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/ic_line1"
+                        android:fontFamily="@font/roboto_slab_bold"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/loginPassword2"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loginPassword"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:background="@drawable/ic_line1"
-                    android:hint="Password"
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
-                    android:inputType="textPassword"
-                    android:fontFamily="@font/roboto_slab_bold"
-                    android:paddingLeft="10dp"/>
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-    </RelativeLayout>
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="@color/bg_blue"
+                    app:boxStrokeColor="@color/bg_blue"
+                    app:errorEnabled="true"
+                    app:hintTextColor="@color/bg_blue"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/bg_blue"
+                    app:placeholderTextColor="@color/bg_blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loginPassword2"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/ic_line1"
+                        android:fontFamily="@font/roboto_slab_bold"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginRight="25dp"
-        android:orientation="vertical"
         android:layout_marginTop="30dp"
+        android:layout_marginRight="25dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
         android:paddingLeft="30dp">
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:textColor="@color/bg_blue"
             android:background="@drawable/ic_btn_login"
-            android:fontFamily="@font/roboto_slab_bold"/>
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="Login"
+            android:textColor="@color/bg_blue" />
+
         <Button
             android:id="@+id/btnRegis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Registration"
-            android:textColor="@color/white"
-            android:background="@drawable/ic_btn_regis"
             android:layout_marginTop="20dp"
+            android:background="@drawable/ic_btn_regis"
             android:fontFamily="@font/roboto_slab_bold"
-            android:onClick="register"/>
+            android:onClick="register"
+            android:text="Registration"
+            android:textColor="@color/white" />
     </LinearLayout>
 </LinearLayout>
