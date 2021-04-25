@@ -22,7 +22,7 @@ public class TradeActivity extends AppCompatActivity {
         buy = findViewById(R.id.imaget_btn_trade_buy);
         trade = findViewById(R.id.marketbtn);
         wallet = findViewById(R.id.navWallet1);
-        selltent = new Intent(this,BuySellActivity.class);g
+        selltent = new Intent(this,BuySellActivity.class);
         buytent = new Intent(this, BuySellActivity.class);
         market = new Intent(this,MarketActivity.class);
         wallettent = new Intent(this,WalletActivity.class);
