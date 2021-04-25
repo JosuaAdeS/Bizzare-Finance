@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -72,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                                         Toast.makeText(MainActivity.this, "Login Successfull",
                                                 Toast.LENGTH_LONG).show();
                                         UserDetail.uid = task.getResult().getUser().getUid();
-                                        Intent intent = new Intent(MainActivity.this, TradeActivity.class);
+                                        Intent intent = new Intent(MainActivity.this, MarketActivity.class);
                                         startActivity(intent);
                                     } else {
                                         Log.w("Login", "Login:failure", task.getException());

@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class TradeActivity extends AppCompatActivity {
+public class MarketActivity extends AppCompatActivity {
 
     ListView list;
     String titles[] = {"Bitcoin", "ASCH Finance", "Faircoin", "Myth US", "PeerNance", "Radium", "Redcoin", "RiseCoin", "Skylink", "Vergecoin", "Voxels", "World Link"};
@@ -28,7 +28,7 @@ public class TradeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trade);
+        setContentView(R.layout.activity_market);
 
         list = findViewById(R.id.listMarket);
 
