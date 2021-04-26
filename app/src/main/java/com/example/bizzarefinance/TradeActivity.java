@@ -10,8 +10,8 @@ import android.widget.ImageView;
 
 public class TradeActivity extends AppCompatActivity {
 
-    Intent buytent,market,wallettent,selltent;
-    ImageButton buy,wallet,sell;
+    Intent buytent, market, wallettent, selltent;
+    ImageButton buy, wallet, sell;
     ImageView trade;
 
     @Override
@@ -22,10 +22,11 @@ public class TradeActivity extends AppCompatActivity {
         buy = findViewById(R.id.imaget_btn_trade_buy);
         trade = findViewById(R.id.marketbtn);
         wallet = findViewById(R.id.navWallet1);
-        selltent = new Intent(this,BuySellActivity.class);
+        sell = findViewById(R.id.imaget_btn_trade_sell);
+        selltent = new Intent(this, BuySellActivity.class);
         buytent = new Intent(this, BuySellActivity.class);
-        market = new Intent(this,MarketActivity.class);
-        wallettent = new Intent(this,WalletActivity.class);
+        market = new Intent(this, MarketActivity.class);
+        wallettent = new Intent(this, WalletActivity.class);
 
         wallet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,10 +46,18 @@ public class TradeActivity extends AppCompatActivity {
         buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buytent.putExtra("code","0");
                 startActivity(buytent);
             }
         });
 
+        sell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selltent.putExtra("code", "1");
+                startActivity(selltent);
+            }
+        });
 
     }
 }

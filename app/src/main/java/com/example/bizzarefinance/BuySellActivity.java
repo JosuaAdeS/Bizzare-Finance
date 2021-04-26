@@ -35,21 +35,22 @@ public class BuySellActivity extends AppCompatActivity {
 
         list = findViewById(R.id.listCrypto);
         MyAdapter adapter = new MyAdapter(this,TCnames,TLogos);
+        String code = getIntent().getStringExtra("code");
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent buy = new Intent(BuySellActivity.this,TradeJualActivity.class);
-                Intent sell = new Intent(BuySellActivity.this,TradeBeliActivity.class);
-                buy.putExtra("CryptoName",list.getItemAtPosition(position).toString());
-                buy.putExtra("position",String.valueOf(position));
-                buy.putExtra("Price",TPrices[position].replaceAll(",",""));
-                buy.putExtra("CName",TCnames[position]);
-                setBuyPos(position);
-                startActivity(buy);
+                if (code.equals("0")) {
+                    Intent buy = new Intent(BuySellActivity.this, TradeJualActivity.class);
+                    buy.putExtra("CryptoName", list.getItemAtPosition(position).toString());
+                    buy.putExtra("position", String.valueOf(position));
+                    buy.putExtra("Price", TPrices[position].replaceAll(",", ""));
+                    buy.putExtra("CName", TCnames[position]);
+                    setBuyPos(position);
+                    startActivity(buy);
+                }
             }
         });
         list.setAdapter(adapter);
-
     }
 
     class MyAdapter extends ArrayAdapter<String> {

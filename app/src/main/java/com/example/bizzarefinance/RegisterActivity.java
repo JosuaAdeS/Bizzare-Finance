@@ -111,8 +111,10 @@ public class RegisterActivity extends AppCompatActivity {
                                         alertDialog.show();
                                         firebaseDatabase.getReference(UserDetail.uid).setValue(userDetail)
                                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
+
                                                     @Override
                                                     public void onSuccess(Void aVoid) {
+                                                        firebaseDatabase.getReference(UserDetail.uid).child("crypto");
                                                         Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                                                         startActivity(intent);
                                                     }

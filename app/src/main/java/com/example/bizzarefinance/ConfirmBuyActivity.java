@@ -61,10 +61,17 @@ public class ConfirmBuyActivity extends AppCompatActivity {
                 utils.getReferenceFirebase().child("balance").setValue(totalBalance).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Intent intent = new Intent(ConfirmBuyActivity.this, WalletActivity.class);
-                        startActivity(intent);
+                        utils.getReferenceFirebase().child("crypto").child(Cname).setValue(coin.substring(0, 5))
+                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Intent intent = new Intent(ConfirmBuyActivity.this, WalletActivity.class);
+                                        startActivity(intent);
+                                    }
+                                });
                     }
                 });
+
             }
         });
     }

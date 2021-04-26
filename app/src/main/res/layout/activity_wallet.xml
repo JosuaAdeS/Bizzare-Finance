@@ -98,10 +98,20 @@
         android:layout_height="0dp"
         android:layout_weight="2"
         android:paddingLeft="20pt"
-        android:paddingRight="20pt">
+        android:paddingRight="20pt"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Asset"
+            android:textColor="@color/bg_blue"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/txtAsset"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Your Asset"
             android:textColor="@color/white"

@@ -40,10 +40,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/arvo_bold"
                     android:text="Sell Crypto Coin"
                     android:textColor="@color/white"
-                    android:textSize="17dp"
-                    android:fontFamily="@font/arvo_bold"/>
+                    android:textSize="17dp" />
 
             </LinearLayout>
 
@@ -51,8 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="right|center"
-                android:paddingRight="17dp">
-            </LinearLayout>
+                android:paddingRight="17dp"></LinearLayout>
         </RelativeLayout>
 
 
@@ -73,80 +72,95 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center">
+
                 <ImageView
+                    android:id="@+id/TBIcon"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:id="@+id/TBIcon"
-                    android:background="@drawable/redcoin"/>
+                    android:background="@drawable/redcoin" />
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/arvo_bold"
-                    android:paddingLeft="10dp"
                     android:id="@+id/txtTBIconName"
-                    android:text="1 RedCoin = "/>
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:textColor="@color/white"
                     android:fontFamily="@font/arvo_bold"
                     android:paddingLeft="10dp"
+                    android:text="1 RedCoin = "
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <TextView
                     android:id="@+id/txtTBPrice"
-                    android:text="Rp.190,000,00"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arvo_bold"
+                    android:paddingLeft="10dp"
+                    android:text="Rp.190,000,00"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
             </LinearLayout>
 
         </RelativeLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:paddingTop="10dp">
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical">
-                <TextView
+
+
+                <EditText
+                    android:id="@+id/editTextAmountSell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30dp"
-                    android:textColor="@color/white"
                     android:fontFamily="@font/arvo_bold"
                     android:paddingLeft="10dp"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:textSize="30dp" />
+
                 <TextView
+                    android:id="@+id/txtTBIconName2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="13dp"
-                    android:textColor="@color/white"
                     android:fontFamily="@font/arvo_bold"
                     android:paddingLeft="65dp"
-                    android:text="USD"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12dp"
+                    android:text="USD"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/arvo_bold"
-                    android:paddingTop="30dp"
-                    android:id="@+id/txtTJRange"
-                    android:text="10,000 USD - 15,000,00 USD"/>
+                    android:textSize="13dp" />
+
                 <Button
+                    android:id="@+id/maks"
                     android:layout_width="350dp"
-                    android:id="@+id/sellNow"
                     android:layout_height="wrap_content"
-                    android:text="Sell Now"
-                    android:textColor="@color/white"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/ic_btn_login"
+                    android:backgroundTint="@color/dark_gray"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="Maks"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnSell"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/ic_btn_regis"
                     android:fontFamily="@font/roboto_slab_bold"
-                    android:layout_marginTop="50dp"/>
+                    android:text="Continue"
+                    android:textColor="@color/white" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

@@ -24,11 +24,11 @@ public class MarketActivity extends AppCompatActivity {
     public static int pos;
 
 
-    String titles[] = {"Bitcoin", "ASCH Finance", "Faircoin", "Myth US", "PeerNance", "Radium", "Redcoin", "RiseCoin", "Skylink", "Vergecoin", "Voxels", "World Link"};
-    String standfors [] = {"BTC", "ASCH", "FCN", "MYU", "PNC", "RAD", "RDC", "RSC", "SLK", "VEC", "VXL", "WLK"};
-    String prices [] = {"49,732.72","2,195.19","488.10","1.01","0.27676","29.14","224.97","31.19","3,852.62","39,122.51","254.78","769,90"};
-    String changes [] = {"-0,72%","-6.63%","-1.81%","-4.17%","-6.95%","+0.04%","+14.66%","-5.14%","+3.16%","-7.83%","-3.84%","+3.54%"};
-    int imgs[] = {R.drawable.bitcoin,R.drawable.aschfinance,R.drawable.faircoin,R.drawable.mythus,
+    String titles[] = {"ASCH Finance","Bitcoin", "Faircoin", "Myth US", "PeerNance", "Radium", "Redcoin", "RiseCoin", "Skylink", "Vergecoin", "Voxels", "World Link"};
+    String standfors [] = { "ASCH","BTC", "FCN", "MYU", "PNC", "RAD", "RDC", "RSC", "SLK", "VEC", "VXL", "WLK"};
+    String prices [] = {"2,195.19","49,732.72","488.10","1.01","0.27676","29.14","224.97","31.19","3,852.62","39,122.51","254.78","769,90"};
+    String changes [] = {"-6.63%","-0,72%","-1.81%","-4.17%","-6.95%","+0.04%","+14.66%","-5.14%","+3.16%","-7.83%","-3.84%","+3.54%"};
+    int imgs[] = {R.drawable.aschfinance,R.drawable.bitcoin,R.drawable.faircoin,R.drawable.mythus,
             R.drawable.peernance,R.drawable.radium,R.drawable.redcoin,R.drawable.risecoin,
             R.drawable.skylink,R.drawable.vergecoin,R.drawable.voxels,R.drawable.worldlink};
 
