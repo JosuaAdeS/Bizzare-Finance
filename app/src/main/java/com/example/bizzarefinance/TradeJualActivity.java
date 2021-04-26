@@ -55,6 +55,8 @@ public class TradeJualActivity extends AppCompatActivity {
 
 //                intent.putExtra("cname",ma.getStandfors(BuySellActivity.getSellPos()));
 
+                //intent.putExtra("cname",ma.getStandfors(BuySellActivity.getSellPos()));
+
                 startActivity(intent);
             }
         });
