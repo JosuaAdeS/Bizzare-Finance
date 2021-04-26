@@ -31,7 +31,7 @@ public class TradeActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("User", MODE_PRIVATE);
         int balance = sharedPreferences.getInt("balance", 0);
 
-        selltent = new Intent(this, BuySellActivity.class);
+        selltent = new Intent(this, SellActivity.class);
         buytent = new Intent(this, BuySellActivity.class);
         market = new Intent(this, MarketActivity.class);
         wallettent = new Intent(this, WalletActivity.class);

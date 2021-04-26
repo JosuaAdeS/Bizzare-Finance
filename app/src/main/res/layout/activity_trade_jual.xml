@@ -145,18 +145,27 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arvo_bold"
                     android:paddingTop="5dp"
-                    android:text="10 USD - 15,000 USD"
+                    android:text="Minimal $10"
                     android:textColor="@color/bg_blue"
                     android:textSize="10dp"
                     android:textStyle="italic" />
 
-
+                <Button
+                    android:id="@+id/maksBalance"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/ic_btn_login"
+                    android:backgroundTint="@color/dark_gray"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="Maks"
+                    android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/btnTJ"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/ic_btn_regis"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:text="Continue"

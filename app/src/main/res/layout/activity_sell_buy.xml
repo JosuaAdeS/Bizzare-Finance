@@ -100,7 +100,7 @@
         android:paddingTop="10dp">
 
         <ListView
-            android:id="@+id/listCrypto"
+            android:id="@+id/listCrypto2"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
