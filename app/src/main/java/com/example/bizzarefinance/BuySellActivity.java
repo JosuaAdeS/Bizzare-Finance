@@ -42,9 +42,9 @@ public class BuySellActivity extends AppCompatActivity {
                 Intent sell = new Intent(BuySellActivity.this,TradeBeliActivity.class);
                 buy.putExtra("CryptoName",list.getItemAtPosition(position).toString());
                 buy.putExtra("position",String.valueOf(position));
-                buy.putExtra("Price",TPrices[position]);
+                buy.putExtra("Price",TPrices[position].replaceAll(",",""));
+                buy.putExtra("CName",TCnames[position]);
                 setBuyPos(position);
-                Log.d("Position now :?", String.valueOf(position));
                 startActivity(buy);
             }
         });

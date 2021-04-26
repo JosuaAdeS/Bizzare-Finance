@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -21,37 +23,25 @@ public class WalletActivity extends AppCompatActivity {
     private ImageButton navMarket,navTrade,walletDeposit;
     private TextView txtBalance;
     private DatabaseReference reference;
+
+    SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wallet);
 
-        String uid = null;
         navMarket = findViewById(R.id.navMarket2);
         navTrade = findViewById(R.id.navTrade2);
         walletDeposit = findViewById(R.id.walletDeposit);
         txtBalance = findViewById(R.id.balanceTotal);
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            uid = user.getUid();
-        }
-        reference = FirebaseDatabase.getInstance("https://bizzarefinance-default-rtdb.firebaseio.com/").getReference(uid);
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String balance = snapshot.child("balance").getValue().toString();
-                int total = Integer.parseInt(balance);
-                String hasil = String.format("%,d",total) + ".00";
-                txtBalance.setText(hasil);
-                setBalance(total);
-            }
+        sharedPreferences = getSharedPreferences("User",MODE_PRIVATE);
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+        Log.d("Preferences : ",sharedPreferences.getInt("balance",0)+" ");
 
-            }
-        });
+        txtBalance.setText(String.format("%,d",sharedPreferences.getInt("balance",0)));
+
         navTrade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

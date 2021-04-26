@@ -153,13 +153,13 @@
 
 
                 <Button
-                    android:id="@+id/buyNow"
+                    android:id="@+id/btnTJ"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
                     android:background="@drawable/ic_btn_regis"
                     android:fontFamily="@font/roboto_slab_bold"
-                    android:text="Buy Now"
+                    android:text="Continue"
                     android:textColor="@color/white" />
             </LinearLayout>
         </RelativeLayout>

@@ -3,7 +3,9 @@ package com.example.bizzarefinance;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -19,9 +21,16 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     private TextInputEditText loginEmail, loginPassword;
     private TextInputLayout lEmail, lPassword;
@@ -29,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,10 +77,27 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
+                                        getBalanceFirebase();
                                         Log.d("Login", "Login:success");
                                         Toast.makeText(MainActivity.this, "Login Successfull",
                                                 Toast.LENGTH_LONG).show();
                                         UserDetail.setUid(task.getResult().getUser().getUid());
+                                        reference = firebaseDatabase.getReference(task.getResult().getUser().getUid());
+                                        reference.addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                String balance = snapshot.child("balance").getValue().toString();
+                                                int total = Integer.parseInt(balance);
+                                                UserDetail user = new UserDetail();
+                                                user.setBalance(total);
+                                            }
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError error) {
+
+                                            }
+                                        });
+
                                         Intent intent = new Intent(MainActivity.this, MarketActivity.class);
                                         startActivity(intent);
                                     } else {
@@ -132,4 +159,27 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+
+    public void getBalanceFirebase() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance("https://bizzarefinance-default-rtdb.firebaseio.com/");
+        DatabaseReference reference = firebaseDatabase.getReference(user.getUid());
+        sharedPreferences = getSharedPreferences("User", Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String x = snapshot.child("balance").getValue().toString();
+                Log.d("Snapshot : ",x);
+                int total = Integer.parseInt(x);
+                editor.putInt("balance",total);
+                editor.apply();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
 }
