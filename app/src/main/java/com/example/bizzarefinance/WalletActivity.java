@@ -43,8 +43,6 @@ public class WalletActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("User", MODE_PRIVATE);
 
-        Log.d("Preferences : ", sharedPreferences.getInt("balance", 0) + " ");
-
         txtBalance.setText(String.format("%,d", sharedPreferences.getInt("balance", 0)));
 
         DatabaseReference rootRef = utils.getReferenceFirebase();
