@@ -84,7 +84,7 @@ public class SellActivity extends AppCompatActivity {
         return sellPos;
     }
 
-    public static void setsellPos(int sellPosPos) {
+    public static void setsellPos(int sellPos) {
         SellActivity.sellPos = sellPos;
     }
 }
