@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,12 +26,17 @@ public class WalletActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wallet);
 
+        String uid = null;
         navMarket = findViewById(R.id.navMarket2);
         navTrade = findViewById(R.id.navTrade2);
         walletDeposit = findViewById(R.id.walletDeposit);
         txtBalance = findViewById(R.id.balanceTotal);
 
-        reference = FirebaseDatabase.getInstance("https://bizzarefinance-default-rtdb.firebaseio.com/").getReference(UserDetail.getUid());
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            uid = user.getUid();
+        }
+        reference = FirebaseDatabase.getInstance("https://bizzarefinance-default-rtdb.firebaseio.com/").getReference(uid);
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

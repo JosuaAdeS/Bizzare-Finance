@@ -29,8 +29,19 @@ public class MarketActivity2 extends AppCompatActivity {
 
             if (bundle != null) {
                 txtCnameMarket2.setText(marketActivity.getTitles(MarketActivity.getPos()));
-                txtPriceMarket2.setText(marketActivity.getPrices(MarketActivity.getPos()));
-                txtChangeMarket2.setText(marketActivity.getChanges(MarketActivity.getPos()));
+                txtPriceMarket2.setText("$"+marketActivity.getPrices(MarketActivity.getPos()));
+                int x = marketActivity.getChanges(MarketActivity.getPos()).indexOf("+");
+                boolean color;
+                if (x==0)color = true;
+                else color = false;
+
+                if (color==false){
+                    txtChangeMarket2.setTextColor(getResources().getColor(R.color.red));
+                    txtChangeMarket2.setText(marketActivity.getChanges(MarketActivity.getPos()));
+                }else {
+                    txtChangeMarket2.setTextColor(getResources().getColor(R.color.green));
+                    txtChangeMarket2.setText(marketActivity.getChanges(MarketActivity.getPos()));
+                }
             }
         }catch (Exception e){
             Log.w("ErrorMarket:?",e);
