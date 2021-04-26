@@ -52,7 +52,9 @@ public class TradeJualActivity extends AppCompatActivity {
                 Intent intent = new Intent(TradeJualActivity.this,ConfirmBuyActivity.class);
                 intent.putExtra("totalCoin",String.valueOf(totalCoin));
                 intent.putExtra("purchase",purchase);
+
 //                intent.putExtra("cname",ma.getStandfors(BuySellActivity.getSellPos()));
+
                 startActivity(intent);
             }
         });
