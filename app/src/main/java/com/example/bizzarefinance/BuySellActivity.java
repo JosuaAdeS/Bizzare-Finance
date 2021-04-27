@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ public class BuySellActivity extends AppCompatActivity {
 
     ListView list;
     public static int buyPos = 0;
+    private ImageButton back;
 
     MarketActivity ma = new MarketActivity();
 

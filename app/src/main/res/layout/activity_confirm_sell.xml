@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingTop="20dp"
+                android:text="Confirm Sell"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="top|left"
+            android:padding="8pt">
+
+            <ImageButton
+                android:id="@+id/backConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_back_trade" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingLeft="30dp"
+                android:paddingBottom="10dp"
+                android:text="Total amount "
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingLeft="30dp"
+                android:paddingBottom="10dp"
+                android:text="Coin Sell"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingLeft="30dp"
+                android:paddingBottom="10dp"
+                android:text="Total Coin"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingLeft="30dp"
+                android:paddingBottom="10dp"
+                android:text="Your Balance "
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingLeft="30dp"
+                android:paddingBottom="10dp"
+                android:text="Total Balance "
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingLeft="30dp"
+                android:paddingBottom="10dp"
+                android:text=":"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingLeft="30dp"
+                android:paddingBottom="10dp"
+                android:text=":"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingLeft="30dp"
+                android:paddingBottom="10dp"
+                android:text=":"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingLeft="30dp"
+                android:paddingBottom="10dp"
+                android:text=":"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingLeft="30dp"
+                android:paddingBottom="10dp"
+                android:text=":"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/confirmAmount2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingRight="30dp"
+                android:paddingBottom="10dp"
+                android:text="3.00"
+                android:textColor="@color/bg_blue"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/confirmCoin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingRight="30dp"
+                android:paddingBottom="10dp"
+                android:text="3.00"
+                android:textColor="@color/bg_blue"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/confirmRemainCoin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingRight="30dp"
+                android:paddingBottom="10dp"
+                android:text="3.00"
+                android:textColor="@color/bg_blue"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/confirmBalance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingRight="30dp"
+                android:paddingBottom="10dp"
+                android:text="3.00"
+                android:textColor="@color/bg_blue"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/confirmTotal2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arvo_bold"
+                android:paddingRight="30dp"
+                android:paddingBottom="10dp"
+                android:text="3.00"
+                android:textColor="@color/bg_blue"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp"
+            android:gravity="bottom|center">
+
+            <Button
+                android:id="@+id/btnConfirm2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_btn_regis"
+                android:fontFamily="@font/arvo_bold"
+                android:text="Sell now"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

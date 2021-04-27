@@ -13,8 +13,8 @@ import android.widget.ImageView;
 
 public class TradeActivity extends AppCompatActivity {
 
-    Intent buytent, market, wallettent, selltent;
-    ImageButton buy, wallet, sell;
+    Intent buytent, market, wallettent, selltent, convertent;
+    ImageButton buy, wallet, sell, convert;
     ImageView trade;
     SharedPreferences sharedPreferences;
 
@@ -27,14 +27,30 @@ public class TradeActivity extends AppCompatActivity {
         trade = findViewById(R.id.marketbtn);
         wallet = findViewById(R.id.navWallet1);
         sell = findViewById(R.id.imaget_btn_trade_sell);
+        convert = findViewById(R.id.imaget_btn_trade_convert);
 
         sharedPreferences = getSharedPreferences("User", MODE_PRIVATE);
         int balance = sharedPreferences.getInt("balance", 0);
 
         selltent = new Intent(this, SellActivity.class);
+        convertent = new Intent(this, TradeConvertActivity.class);
         buytent = new Intent(this, BuySellActivity.class);
         market = new Intent(this, MarketActivity.class);
         wallettent = new Intent(this, WalletActivity.class);
+
+        convert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        convert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(convertent);
+            }
+        });
 
         wallet.setOnClickListener(new View.OnClickListener() {
             @Override

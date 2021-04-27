@@ -64,7 +64,7 @@ public class TradeJualActivity extends AppCompatActivity {
                 String purchase = editTextAmountBuy.getText().toString();
                 double amount = Double.parseDouble(purchase);
                 if (amount <= balance) {
-                    if (amount > 10) {
+                    if (amount >= 10 && amount >0) {
                         double totalCoin = amount / price;
                         Intent intent = new Intent(TradeJualActivity.this, ConfirmBuyActivity.class);
                         intent.putExtra("totalCoin", String.valueOf(totalCoin));

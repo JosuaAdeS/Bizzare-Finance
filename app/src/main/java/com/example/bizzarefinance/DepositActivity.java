@@ -46,8 +46,8 @@ public class DepositActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int balance = sharedPreferences.getInt("balance",0);
                 int amount = Integer.parseInt(amountDeposit.getText().toString());
-                if (amount<10000){
-                    Toast.makeText(DepositActivity.this, "Deposit minimum is 10,000",
+                if (amount<10){
+                    Toast.makeText(DepositActivity.this, "Deposit minimum is 10",
                             Toast.LENGTH_SHORT).show();
                     reload();
                 }else {

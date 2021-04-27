@@ -134,7 +134,7 @@
 
                 <ImageButton
                     android:id="@+id/imaget_btn_trade_sell"
-                    android:layout_width="68dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="68dp"
                     android:background="@android:color/transparent"
                     android:src="@drawable/ic_sell_trade" />
